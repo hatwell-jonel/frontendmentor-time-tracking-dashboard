@@ -25,7 +25,7 @@ Users should be able to:
 ### Screenshot
 
 ![small screen](./screenshots/smallScreen.png)
-![medium screen](./screenshots/mediumScreen.png.png)
+![medium screen](./screenshots/mediumScreen.png)
 ![large screen](./screenshots/largeScreen.png)
 
 
