@@ -24,15 +24,15 @@ Users should be able to:
 
 ### Screenshot
 
-![small screen](./screenshots/smallScreen.png);
-![medium screen](./screenshots/mediumScreen.png.png);
-![large screen](./screenshots/largeScreen.png);
+![small screen](./screenshots/smallScreen.png)
+![medium screen](./screenshots/mediumScreen.png.png)
+![large screen](./screenshots/largeScreen.png)
 
 
 ### Links
 
-- Solution URL: [Click here](https://your-solution-url.com)
-- Live Site URL: [Click here](https://your-live-site-url.com)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/random-user-api-bootstrap-5-vanilla-javascript-ZDzJpknOB)
+- Live Site URL: [Click here](https://hatwell-jonel.github.io/frontendmentor-time-tracking-dashboard/)
 
 
 ### Built with
