@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="Frontend mentor Time tracking dashboard solution built with HTML, BOOTSTRAP5, JAVASCRIPT, CSS and Random user API coded by Jonel Hatwell">
+  <meta name="keywords" content="HTML,CSS,JAVASCRIPT, JSON, Bootstrap 5,fem, frontendmentor, solution, time, tracking, dashboard, time tracking dashboard, Random user api">
+  <meta name="author" content="Jonel Hatwell">
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- STYLES -->
+  <link rel="stylesheet" href="./styles/index.css">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body>
+  <h1 class="visually-hidden d-none">TIMER TRACKING</h1>
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
+        <!-- PROFILE -->
+        <div class="profile">
+          <div class="profile-user">
+            <div class="profile-user__img">
+              <!-- RENDERED IN JAVASCRIPT -->
+              <!-- <img src="./images/image-jeremy.png" class="img-fluid user-img" alt="profile picture"> -->
+            </div>
+            <div class="profile-user__name">
+              <span class="report">Report for</span>
+              <p class="name"><!-- RENDERED IN JAVASCRIPT -->
+              </p>
+            </div>
+          </div>
+
+          <div class="buttons">
+          <div class="btn-group d-flex flex-md-column" role="group" aria-label="time buttons">
+            <!-- Daily -->
+            <input type="radio" class="btn-check" name="time" id="btn-daily" autocomplete="off" data-id="daily">
+            <label class=" btn btn-outline-primary bg-transparent border border-0 shadow-none text-md-start" for="btn-daily">Daily</label>
+
+            <!-- Weekly -->
+            <input type="radio" class="btn-check" name="time" id="btn-weekly" autocomplete="off" data-id="weekly" checked>
+            <label class="btn btn-outline-primary bg-transparent border border-0 shadow-none text-md-start" for="btn-weekly">Weekly</label>
+            
+            <!-- Monthly -->
+            <input type="radio" class="btn-check" name="time" id="btn-monthly" autocomplete="off" data-id="monthly">
+            <label class="btn btn-outline-primary bg-transparent border border-0 shadow-none text-md-start" for="btn-monthly">Monthly</label>
+          </div>
+        </div>    
+      </div>
+    </div>
+
+    <div class="col-md-8 col-lg-9">
+      <div class="row g-3">
+
+        <!-- work -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-0 clearfix" id="work">
+            <img src="./images/icon-work.svg" class="card-img float-end" alt="work">
+
+            <div class="card-body">
+              <header class="d-flex justify-content-between align-items-center">
+                  <h2>Work</h2>
+                  <button class="btn">
+                    <svg width="21" height="5">
+                      <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                    </svg>
+                  </button>
+              </header>
+
+              <div class="details d-flex justify-content-between align-items-center flex-md-column align-items-md-start py-3">
+                <h3 class="hours mb-md-2"><span class="number-hrs">0</span>hrs</h3>
+                <div class="history">
+                  <span class="history-hour">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Play -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-0 clearfix" id="play">
+            <img src="./images/icon-play.svg" class="card-img float-end" alt="play">
+
+            <div class="card-body">
+              <header class="d-flex justify-content-between align-items-center">
+                  <h2>Play</h2>
+                  <button class="btn">
+                     <svg width="21" height="5">
+                      <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                    </svg>
+                  </button>
+              </header>
+
+              <div class="details d-flex justify-content-between align-items-center flex-md-column align-items-md-start py-3">
+                <h3 class="hours mb-md-2"><span class="number-hrs">0</span>hrs</h3>
+                <div class="history">
+                  <span class="history-hour">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Study -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-0 clearfix" id="study">
+            <img src="./images/icon-study.svg" class="card-img float-end" alt="study">
+
+            <div class="card-body">
+              <header class="d-flex justify-content-between align-items-center">
+                  <h2>Study</h2>
+                  <button class="btn">
+                    <svg width="21" height="5">
+                      <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                    </svg>
+                  </button>
+              </header>
+
+              <div class="details d-flex justify-content-between align-items-center flex-md-column align-items-md-start py-3">
+                <h3 class="hours mb-md-2"><span class="number-hrs">0</span>hrs</h3>
+                <div class="history">
+                  <span class="history-hour">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- exercise -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-0 clearfix" id="exercise">
+            <img src="./images/icon-exercise.svg" class="card-img float-end" alt="exercise">
+
+            <div class="card-body">
+              <header class="d-flex justify-content-between align-items-center">
+                  <h2>Exercise</h2>
+                  <button class="btn">
+                    <svg width="21" height="5">
+                      <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                    </svg>
+                  </button>
+              </header>
+
+              <div class="details d-flex justify-content-between align-items-center flex-md-column align-items-md-start py-3">
+                <h3 class="hours mb-md-2"><span class="number-hrs">0</span>hrs</h3>
+                <div class="history">
+                  <span class="history-hour">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- social -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-0 clearfix" id="social">
+            <img src="./images/icon-social.svg" class="card-img float-end" alt="work">
+
+            <div class="card-body">
+              <header class="d-flex justify-content-between align-items-center">
+                  <h2>social</h2>
+                  <button class="btn">
+                     <svg width="21" height="5">
+                      <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                    </svg>
+                  </button>
+              </header>
+
+              <div class="details d-flex justify-content-between align-items-center flex-md-column align-items-md-start py-3">
+                <h3 class="hours mb-md-2"><span class="number-hrs">0</span>hrs</h3>
+                <div class="history">
+                  <span class="history-hour">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- selfcare -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-0 clearfix" id="selfcare">
+            <img src="./images/icon-self-care.svg" class="card-img float-end" alt="selfcare">
+
+            <div class="card-body">
+              <header class="d-flex justify-content-between align-items-center">
+                  <h2>Self Care</h2>
+                  <button class="btn">
+                    <svg width="21" height="5">
+                      <path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/>
+                    </svg>
+                  </button>
+              </header>
+
+              <div class="details d-flex justify-content-between align-items-center flex-md-column align-items-md-start py-3">
+                <h3 class="hours mb-md-2"><span class="number-hrs">0</span>hrs</h3>
+                <div class="history">
+                  <span class="history-hour">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+      </div>
+    </div>
+
+  </div> <!-- container -->
+  
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- JAVASCRIPT -->
+  <script src="./script/index.js"></script>
+
+</body>
+</html>

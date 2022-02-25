@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root{
+  --color-profile: hsl(246, 80%, 60%);
+  --color-work: hsl(15, 100%, 70%);
+  --color-play: hsl(195, 74%, 62%);
+  --color-study: hsl(348, 100%, 68%);
+  --color-exercise: hsl(145, 58%, 55%);
+  --color-social: hsl(264, 64%, 52%);
+  --color-selfCare: hsl(43, 84%, 65%);
+  --color-body: hsl(226, 43%, 10%);
+  --color-card: hsl(235, 46%, 20%);
+  --color-cta: hsl(235, 45%, 57%);
+  --color-text: hsl(236, 100%, 87%);
+  --color-text2: hsl(236, 100%, 95%);
+  --font: 'Rubik', sans-serif;
+  --borderRadius: 15px;
+}
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: All .150s ease;
+}
+
+body{
+  background-color: var(--color-body);
+  font-family: var(--font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+p,
+h1,
+h2,
+h3,
+h4{
+  margin: 0;
+}
+
+.container{
+  min-width: 280px;
+}
+
+.profile{
+  border-radius: var(--borderRadius);
+  background-color: var(--color-card);
+}
+
+
+.profile .profile-user{
+  background-color: var(--color-profile);
+  display: flex;
+  align-items: center;
+  border-radius: var(--borderRadius);
+  padding: 1.5rem 1rem;
+}
+
+.profile-user__img{
+  width: 90px;
+  height: 90px;
+}
+
+.profile-user__img img{
+  width: 90px;
+  height: 90px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  animation: show .7s;
+}
+
+.profile-user__name{
+  margin-left: .8rem;
+}
+
+.profile-user__name .report{
+  color: var(--color-text);
+}
+
+.profile-user__name .name{
+  width: 100%;
+  min-height: 3.5rem;
+  padding: .150rem 0rem;
+  text-transform: capitalize;
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  animation: show .7s;
+}
+
+.buttons{
+  padding: .3rem;
+  border-radius: var(--borderRadius);
+}
+
+
+
+
+/* 
+==============  CARD DATA ==============
+*/
+#work{
+  background-color: var(--color-work);
+}
+
+#play{
+  background-color: var(--color-play);
+}
+
+#study{
+  background-color: var(--color-study);
+}
+
+#exercise{
+  background-color: var(--color-exercise);
+}
+
+#social{
+  background-color: var(--color-social);
+}
+
+#selfcare{
+  background-color: var(--color-selfCare);
+}
+
+.card{
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+
+.card-img{
+  width: 60px;
+  position: absolute;
+  top: -5px;
+  right: 1rem;
+  z-index: 1;
+}
+
+.card-body{
+  background-color: var(--color-body);
+  border-radius: var(--borderRadius);
+  position: relative;
+  z-index: 2;
+  margin-top: 2.5rem;
+}
+
+.card-body:hover{
+  cursor: pointer;
+  background-color: var(--color-cta);
+}
+
+.card-body:hover > *{
+  color: #fff;
+}
+
+.card-body header{
+  color: var(--color-text);
+}
+
+.card-body header .btn:hover path{
+  fill: var(--color-text2);
+}
+
+.card-body header h2{
+  color: var(--color-text2);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  margin: auto 0;
+}
+
+.card-body .details{
+  color: var(--color-text);
+}
+
+.card-body .details .hours{
+  color: var(--color-text2);
+  font-size: 2.5rem;
+  animation: show .8s;
+}
+
+.card-body .details .hours .number-hrs{
+  margin-right: .350rem;
+}
+
+.card-body .details .history .history-hour{
+  animation: show 3s;
+}
+
+@keyframes show {
+  from{
+    /* opacity: 0; */
+    transform: scale(0);
+  }
+  to{
+    /* opacity: 1; */
+    transform: scale(1);
+  }
+}
+
+
+
+/* 
+==============  MEDIA QUERIES ==============
+*/
+
+@media screen and (min-width: 768px){
+  .profile .profile-user{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-user__name{
+    margin-left: 0rem;
+    margin-top: 1.5rem;
+  }
+
+  .profile-user__name .name{
+    color: #f4f4f4;
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .buttons{
+    padding: .8rem;
+    border-radius: var(--borderRadius);
+  }
+
+  .profile-user__img{
+    width: 100%;
+    height: 90px;
+  }
+
+
+}
